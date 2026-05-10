@@ -4,21 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>1:18 BMW M3 GTR E46 Need for Speed</title>
-    <meta name="description" content="Collector-focused DCM diecast model for serious BMW, E46, racing game, and 1:18 scale collectors.">
+    <meta
+      name="description"
+      content="Collector model for serious BMW, E46, Need for Speed, and 1:18 scale collectors."
+    >
     <meta property="og:title" content="1:18 BMW M3 GTR E46 Need for Speed">
-    <meta property="og:description" content="Collector-focused DCM diecast model for serious BMW, E46, racing game, and 1:18 scale collectors.">
+    <meta
+      property="og:description"
+      content="Collector model for serious BMW, E46, Need for Speed, and 1:18 scale collectors."
+    >
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#0f172a">
     <style>
       :root {
         color-scheme: light;
-        --bg: #f4f6f8;
-        --card: #ffffff;
-        --text: #0f172a;
-        --muted: #475569;
-        --line: #dbe3ea;
-        --accent: #2563eb;
-        --accent-strong: #1d4ed8;
+        --bg: #f3f5f7;
+        --surface: #ffffff;
+        --surface-soft: #f8fafc;
+        --line: #d7dee7;
+        --text: #111827;
+        --muted: #4b5563;
+        --accent: #1d4ed8;
+        --accent-strong: #1e40af;
+        --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
       }
 
       * {
@@ -29,116 +37,161 @@
         margin: 0;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background:
-          radial-gradient(circle at top, #dbeafe 0, rgba(219, 234, 254, 0) 35%),
+          radial-gradient(circle at top, #dbeafe 0, rgba(219, 234, 254, 0) 36%),
           linear-gradient(180deg, #eef2f7 0%, var(--bg) 100%);
         color: var(--text);
       }
 
       main {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 24px 16px;
+        padding: 14px 14px 110px;
       }
 
       .card {
-        width: 100%;
-        max-width: 640px;
-        background: var(--card);
+        max-width: 720px;
+        margin: 0 auto;
+        background: var(--surface);
         border: 1px solid var(--line);
-        border-radius: 20px;
-        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
-        padding: 28px 22px;
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
       }
 
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 12px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 16px;
+      .content {
+        padding: 18px 16px 20px;
       }
 
       h1 {
-        margin: 0 0 12px;
-        font-size: clamp(30px, 5vw, 42px);
-        line-height: 1.05;
+        margin: 0 0 14px;
+        font-size: clamp(24px, 6.6vw, 42px);
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        overflow-wrap: anywhere;
+        word-break: break-word;
       }
 
       .subheadline {
-        margin: 0 0 22px;
+        margin: 0 0 16px;
         color: var(--muted);
-        font-size: 17px;
-        line-height: 1.6;
-      }
-
-      .trust-list {
-        margin: 0 0 24px;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-      }
-
-      .trust-list li {
-        padding: 12px 14px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: #f8fafc;
-        color: var(--text);
+        font-size: 16px;
         line-height: 1.5;
       }
 
-      .note {
-        margin: 0 0 24px;
-        color: var(--muted);
-        line-height: 1.6;
+      .hero {
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        display: block;
+        background: #e5e7eb;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 5 / 3;
       }
 
-      .button-wrap {
+      .cta-stack {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 16px;
+      }
+
+      .cta,
+      .sticky-cta {
+        appearance: none;
+        border: 0;
+        border-radius: 18px;
+        background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 14px 30px rgba(29, 78, 216, 0.22);
+      }
+
+      .cta {
+        display: grid;
+        gap: 4px;
+        padding: 16px 18px;
+      }
+
+      .cta-label {
+        font-size: 22px;
+        line-height: 1.1;
+      }
+
+      .cta-subline {
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .notes {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 0;
         display: grid;
         gap: 10px;
       }
 
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 56px;
-        padding: 14px 18px;
-        border: 0;
-        border-radius: 14px;
-        background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
+      .notes li {
+        background: var(--surface-soft);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 12px 14px;
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .notes li::before {
+        content: "• ";
+        font-weight: 800;
+      }
+
+      .sticky-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 30;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: linear-gradient(180deg, rgba(243, 245, 247, 0) 0%, rgba(243, 245, 247, 0.94) 28%, rgba(243, 245, 247, 1) 100%);
+        backdrop-filter: blur(10px);
+      }
+
+      .sticky-cta {
+        display: block;
+        width: min(720px, calc(100% - 28px));
+        margin: 0 auto;
+        padding: 16px 18px;
+        font-size: 20px;
+        line-height: 1.1;
       }
 
       .cta:hover,
-      .cta:focus-visible {
-        filter: brightness(1.03);
+      .cta:focus-visible,
+      .sticky-cta:hover,
+      .sticky-cta:focus-visible {
+        filter: brightness(1.04);
       }
 
-      .small-note {
-        margin: 0;
-        font-size: 14px;
-        color: var(--muted);
-        text-align: center;
+      .cta[aria-disabled="true"],
+      .sticky-cta[aria-disabled="true"] {
+        opacity: 0.8;
+        pointer-events: none;
       }
 
-      @media (min-width: 640px) {
-        .card {
-          padding: 36px 34px;
+      @media (min-width: 760px) {
+        main {
+          padding: 26px 20px 120px;
+        }
+
+        .content {
+          padding: 26px 24px 24px;
         }
       }
     </style>
 
-    <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -148,6 +201,7 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
+
       fbq('init', '1511077057199526');
       fbq('track', 'PageView');
       fbq('track', 'ViewContent', {
@@ -159,53 +213,72 @@
       });
     </script>
     <noscript>
-      <img height="1" width="1" style="display:none"
+      <img
+        alt=""
+        height="1"
         src="https://www.facebook.com/tr?id=1511077057199526&ev=PageView&noscript=1"
-        alt="">
+        style="display:none"
+        width="1"
+      >
     </noscript>
-    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <main>
       <section class="card" aria-label="BMW M3 GTR bridge page">
-        <p class="eyebrow">BASEL CARZ Bridge Page</p>
-        <h1>1:18 BMW M3 GTR E46 Need for Speed</h1>
-        <p class="subheadline">
-          Collector-focused DCM diecast model for serious BMW, E46, racing game, and 1:18 scale collectors.
-        </p>
+        <div class="content">
+          <h1>1:18 BMW M3 GTR E46 Need for Speed</h1>
 
-        <ul class="trust-list">
-          <li>Exact item is shown on eBay</li>
-          <li>Review all photos and details before buying</li>
-          <li>Ships through eBay seller checkout</li>
-          <li>Serious collectors can send a reasonable offer on eBay</li>
-        </ul>
+          <div class="cta-stack">
+            <a
+              class="cta"
+              data-ebay-cta="top"
+              href="https://ebay.us/m/EnlcgD"
+              rel="noopener noreferrer"
+            >
+              <span class="cta-label">View on eBay</span>
+              <span class="cta-subline">Secure checkout through eBay</span>
+            </a>
+          </div>
 
-        <p class="note">Please review all photos and details on eBay before buying.</p>
+          <p class="subheadline">
+            Collector model for serious BMW, E46, Need for Speed, and 1:18 scale collectors.
+          </p>
 
-        <div class="button-wrap">
-          <a
-            id="buy-on-ebay"
-            class="cta"
-            href="https://ebay.us/m/EnlcgD"
-            rel="noopener noreferrer"
-          >Buy on eBay</a>
-          <p class="small-note">You will be redirected to the secure eBay listing.</p>
+          <img
+            class="hero"
+            src="assets/bmw-m3-gtr-hero.jpg"
+            alt="1:18 BMW M3 GTR E46 collector model"
+          >
+
+          <ul class="notes">
+            <li>Exact item is shown on eBay</li>
+            <li>Review all photos and details before buying</li>
+            <li>Secure checkout through eBay</li>
+            <li>Serious collectors can send a reasonable offer</li>
+          </ul>
         </div>
       </section>
     </main>
 
+    <div class="sticky-bar" aria-label="Sticky buy bar">
+      <a
+        class="sticky-cta"
+        data-ebay-cta="sticky"
+        href="https://ebay.us/m/EnlcgD"
+        rel="noopener noreferrer"
+      >Buy on eBay</a>
+    </div>
+
     <script>
       (function () {
-        var button = document.getElementById('buy-on-ebay');
         var targetUrl = 'https://ebay.us/m/EnlcgD';
+        var redirectScheduled = false;
+        var buttons = document.querySelectorAll('[data-ebay-cta]');
 
-        if (!button) {
-          return;
-        }
-
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
+        function trackIntent() {
+          if (typeof fbq !== 'function') {
+            return;
+          }
 
           fbq('track', 'Lead', {
             content_name: '1:18 DCM BMW M3 GTR E46 2001 Need for Speed',
@@ -218,10 +291,32 @@
             product: 'BMW M3 GTR E46 1:18 DCM',
             destination: 'eBay'
           });
+        }
 
-          setTimeout(function () {
-            window.location.href = targetUrl;
-          }, 400);
+        function disableButtons() {
+          buttons.forEach(function (button) {
+            button.setAttribute('aria-disabled', 'true');
+          });
+        }
+
+        function handleCta(event) {
+          event.preventDefault();
+
+          if (redirectScheduled) {
+            return;
+          }
+
+          redirectScheduled = true;
+          disableButtons();
+          trackIntent();
+
+          window.setTimeout(function () {
+            window.location.assign(targetUrl);
+          }, 700);
+        }
+
+        buttons.forEach(function (button) {
+          button.addEventListener('click', handleCta, { passive: false });
         });
       }());
     </script>
